@@ -1,0 +1,7 @@
+/ - if prodcut_image_thumbnail.image.url.present?
+/   %li.sell-upload-file
+/     = image_tag prodcut_image_thumbnail.image ,class:"sell-upload-file__image"
+/     .sell-upload-file__buttons.clearfix
+/       %button.sell-upload-file__buttons--button
+/         編集
+/       = button_tag "削除", class: "sell-upload-file__buttons--button--delete exist-image", id: "delete-button-#{prodcut_image_thumbnail_counter}"
