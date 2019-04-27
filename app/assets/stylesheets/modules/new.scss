@@ -1,67 +1,96 @@
+// トップページのヘッダー・フッターを消す
 .default-container, .top-app-banner.clearfix, .under-footer{
   display:none;
 }
+// 大枠
 .single-container {
-  height: 2144px;
+  height:2144px;
   width: 1440px;
-  padding-bottom:220px;
-  .single-main {
-    height: 2016px;
-    width:1440px;
-    background-color:$gray;
-    .l-single-container.buy-item-container {
+  background-color: $gray;
+  display: block;
+}
+.single-main {
+  width:1440px;
+  height:2016px;
+  background-color: $gray;
+  display: block;
+  .l-single-container.buy-item-container{
+    width: 700px;
+    height:2016px;
+    margin: 0px 370px;
+    display: block;
+    background-color: $white;
+    margin: 0 auto;
+    div {
+    display: block;
+    background-color: $white;
+    color: $black;
+      .data-reactroot {
       height: 2016px;
+      color: $black;
+      }
+    }
+  }
+}
+// 商品の情報を入力
+.sell-container-inner h2 {
+  height: 33px;
+  width: 668px;
+  padding: 32px 16px;
+  line-height: 1.4;
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+}
+.l-single-head {
+  text-align: center;
+  width: 668px;
+  height: 33px;
+  text-align: center;
+  padding :24px 8px;
+  font-size : 18px;
+  line-height: 1.5;
+}
+#sell-container {
+  height:2016px;
+  width:700px;
+  div {
+    display: block;
+  }
+  .sell-container-inner {
+    height:2016px;
+    width:700px;
+  }
+    h2.l-single-head{
+      height:33px;
+      width:668px;
+      padding:32px 16px;
+      font-size:22px;
+      line-height:1.5;
+      text-align:center;
+      font-weight:bold;
+      font-family:"Source Sans Pro";
+      color:$black;
+    }
+    .sell-form {
+      height:1918px;
       width:700px;
-      margin:0 auto;
-      background-color:$white;
-      #sell-container {
-        height:2016px;
-        width:700px;
-        div {
-          display: block;
-        }
-          .sell-container-inner {
-            height:2016px;
-            width:700px;
-          }
-            h2, .l-single-head{
-              height:33px;
-              width:668px;
-              padding:32px 16px;
-              font-size:22px;
-              line-height:1.5;
-              text-align:center;
-              font-weight:bold;
-              font-family:"Source Sans Pro";
-              color:$black;
-            }
-            .sell-form {
-              height:1918px;
-              width:700px;
-              border-top: 1px solid #eee;
-              .sell-upload-box {
-                height:223px;
-                width: 540px;
-                padding: 40px;
-              }
-            }
-                h3, .sell-upload-head {
-                  width:540px;
-                  font-size:100%;
-                  display: block;
-                  font-weight:bold;
-                  color: $black;
-                }
-                p {
-                  height:21px;
-                  weight:540px;
-                  margin: 8px 0 0;
-                  line-height:1.5;
-                  display:block;
-                  font-family:"Source Sans Pro";
-                  color:$black;
-                  font-size:14px;
-                }
+      border-top: 1px solid #eee;
+      .sell-upload-box {
+        height:223px;
+        width: 540px;
+        padding: 40px;
+      }
+    }
+
+// 出品画像
+    h3.sell-upload-head {
+      width:540px;
+      font-size:100%;
+      display: block;
+      font-weight:bold;
+      color: $black;
+    }
   .form-group:first-child{
     margin-top: 0;
   }
@@ -160,6 +189,7 @@
   }
    .sell-upload-drop-box{
     margin: 0 0 20px 0;
+    background-color:$gray;
    }
 
   .sell-upload-drop-box .icon-camera {
@@ -217,7 +247,6 @@
   .sell-dropbox-container.state-image-number-10 .sell-upload-drop-box {
     height:80px;
     width:538px;
-    float: right;
     padding: 40px;
     position: relative;
     min-height: 80px;
@@ -230,7 +259,6 @@
     transition: box-shadow ease-out .3s;
     transition: box-shadow ease-out .3s, -webkit-box-shadow ease-out .3s;
     cursor: pointer;
-    float: right;
     margin-left: 2%;
   }
 
@@ -238,763 +266,246 @@
     overflow: auto;
   }
 
-  .sell-content {
-    padding: 40px;
-    border-top: 1px solid #eee;
-    position:block;
-  }
-    .form-group:last-child {
-      margin-top: 40px;
-    }
-  .sell-content {
-    min-height: 261px;
-    position:block;
-    padding: 40px;
-    border-top: 1px solid #eee;
-    position:block;
-  }
-  .sell-content {
-    min-height: 371px;
-    position:block;
-    padding: 40px;
-    border-top: 1px solid #eee;
-    position:block;
-  }
-  .sell-content {
-    min-height: 299px;
-  }
-  .form-group label {
-    font-weight: 600;
-  }
-  label {
+// 商品名
+.form-group:first-child {
+  width: 620px;
+  height: 70px;
+  margin: 0;
+}
+label {
+  font-weight: bold;
+  display: inline-block;
+  cursor: default;
+  font-size:14px;
+}
+.form-group label {
+  font-weight: 600;
+}
+.input-default {
+  width: 586px;
+  height:28px;
+  padding:10px 16px 8px;
+  border:solid 1px #ccc;
+  line-height: 1.5;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top:8px;
+}
+.form-group {
+  width: 620px;
+  height: 164px;
+  margin-top: 40px;
+}
+.form-group label + .textarea-default {
+  margin: 8px 0 0;
+}
+.textarea-default {
+  display: block;
+  width: 100%;
+  max-width:100%;
+  min-height: 104px;
+  background-color: $white;
+  line-height: 1.5;
+  padding: 10px;
+  border:solid 1px $deep-gray;
+  font-size: 16px;
+  border-radius: 4px;
+}
+textarea {
+  overflow: auto;
+}
+h3.sell-sub-head {
+  font-weight: bold;
+  float: left;
+  color: #888;
+  font-size: 14px;
+  display: inline-block;
+  float:left;
+}
+.sell-form-box {
+  height: 180px;
+  width: 400px;
+  float: right;
+}
+.sell-form-box .form-group {
+  width: 400px;
+  height: 70px;
+}
+.form-group .select-wrap {
+  height: 48px;
+  width: 400px;
+  margin-top: 8px;
+}
+.select-wrap {
+  position: relative;
+  background-color: $white;
+}
+.select-default {
+  position: relative;
+  z-index: 2;
+  height: 46px;
+  width: 366px;
+  padding:0 16px;
+  border-radius: 4px;
+  border: 1px solid $deep-gray;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.select-wrap.fas.fa-chevron-down {
+  height: 10px;
+  width: 16.281px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 8px;
+  transform: translate(0, -50%);
+  .fas.fa-chevron-down {
     display: inline-block;
-    font-size:14px;
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
   }
-  .form-group label+.textarea-default {
-    margin: 8px 0 0;
-  }
-  .textarea-default {
+}
+.sell-content {
+  width: 620px;
+  height: 274px;
+  padding: 40px;
+  border-top: solid 1px $gray;
+  .clearfix:after {
+    content: '';
     display: block;
-    width: 598px;
-    height:120px;
-    max-width: 100%;
-    min-height: 104px;
-    padding: 10px;
-    border: 1px solid $deep-gray;
-    background: $white;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .sell-content {
-    padding:40px;
-    border-top: 1px solid $deep-gray;
-    height:180px;
-    width:620px;
-  }
-    h3.sell-sub-head {
-    height:14px;
-    color: #888;
-    font-size: 14px;
-    display: inline-block;
-    float:left;
-  }
-    .sell-form-box {
-      height:180px;
-      width:400px;
-      float:right;
-    }
-      // .select-wrap {
-      //   height:48px;
-      //   width:400px;
-      //   border-radius: 4px;
-      //   position: relative;
-      //   background: $white;
-      // }
-  .form-group select {
-    width: 100%;
-  }
-  .form-group .select-wrap {
-    margin-top: 8px;
-    height:48px;
-    width:400px;
-    border-radius: 4px;
-    position: relative;
-    background: $white;
-    .select-default{
-      height:46px;
-      width:366px;
-      padding:0 16px;
-      border: solid 1px $deep-gray;
-      position: relative;
-      z-index: 2;
-      border-radius: 4px;
-      background: 0;
-      font-size: 16px;
-      line-height: 1.5;
-      cursor: pointer;
-      .icon-arrow-bottom:before {
-        content: '\e001';
-        font-weight:900;
-        display: inline-block;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-    }
-  }
-  .form-group .input-default {
-    width: 586px;
-    height: 28px;
-    border: solid 1px $deep-gray;
-    margin: 8px 0 0;
-    padding: 10px 16px 8px ;
-    border-radius: 4px;
-  }
-  .text-default {
-    position: relative;
-    z-index: 2;
-    height: 48px;
-    padding: 0 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    cursor: pointer;
+    clear: both;
+    border-style: solid;
+    border-width: 0;
   }
   .form-question {
     display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #0099e8;
-    color: #fff;
+    background-color: #0099e8;
+    color: $white;
     line-height: 14px;
     font-size: 12px;
     text-align: center;
-    }
-  .sell-price>li:first-child {
-    padding: 0 0 24px;
-    border: 0;
-    height: 72px;
   }
-  .sell-price>li {
-    padding: 24px 0 24px;
-    border-top: 1px solid #ccc;
-  }
-  .sell-price .form-group .l-left {
-    width: 50%;
-    line-height: 48px;
-  }
-  .sell-price .form-group .l-right {
-    width: 50%;
-  }
-  .sell-price .clearfix {
-    height: 63px;
-  }
-  .sell-price .bold .l-left {
-    font-size: 16px;
-  }
-  .sell-price .bold .l-right {
-    font-size: 34px;
-  }
-  .sell-price-input {
-    text-align: right;
-    margin: 0;
-  }
-  .sell-price-input>div {
-    display: inline-block;
-    width: 80%;
-    margin: 0 0 0 5%;
-  }
-  .sell-price-input .input-default {
-    margin: 0;
-    text-align: right;
-    width: 160px;
-  }
-  .l-right {
-    float: right;
-    padding: 0;
-  }
-  .l-left {
-    float: left;
-    padding: 0;
-  }
-  .bold {
-    font-weight: 600;
-  }
-  .sell-btn-box p {
-    line-height: 1.5;
-  }
-  .sell-btn-box {
-    .btn-red {
-      width: 100%;
-    }
-  }
-  .blue-icon {
-    color: #0099e8;
-  }
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2999;
-    background: rgba(0,0,0,0.64);
-    -webkit-transition: all ease-out .3s;
-    transition: all ease-out .3s;
-    opacity: 0;
-  }
-
-      .form-group.hidden{
-        display: none;
-      }
-      .select-default.hidden{
-        display: none;
-      }
-      }
-    }
+  a.form-question {
+    text-decoration: none;
   }
 }
-// .single-container {
-//   height:2144px;
-//   width: 1440px;
-//   padding-bottom: 220px;
-//   background-color: $gray;
-//   display: block;
-//   .single-main {
-//     width:1440px;
-//     height:2016px;
-//     background-color: $gray;
-//     display: block;
-//     .l-single-container.buy-item-container{
-//       width: 700px;
-//       height:2016px;
-//       margin: 0px 370px;
-//       display: block;
-//       background-color: $white;
-//       margin: 0 auto;
-//       #sell-container {
-//         width:700px;
-//         height:2016px;
-//       div {
-//         display: block;
-//         background-color: $white;
-//         color: $black;
-//         data-reactroot {
-//           height: 2016px;
-//           color: $black;
-//         }
-//       }
-//       }
-//     }
-//   }
-// }
-
-// .sell-container-inner h2 {
-//   height: 33px;
-//   width: 668px;
-//   padding: 32px 16px;
-//   line-height: 1.4;
-//   display: block;
-//   font-weight: bold;
-//   font-size: 22px;
-// }
-
-// .l-single-head {
-//   text-align: center;
-//   width: 668px;
-//   height: 33px;
-//   text-align: center;
-//   padding :24px 8px;
-//   font-size : 18px;
-//   line-height: 1.5;
-// }
-
-// form {
-//   display: block;
-// }
-
-// .sell-form {
-//   height: 1918px;
-//   width:700px;
-//   border-top:solid 1px $gray;
-// }
-
-// .sell-upload-box {
-//   height: 223px;
-//   width: 540px;
-//   padding: 40px;
-// }
-
-// h3 .sell-upload-box{
-//   height: 16px;
-//   width:540px;
-//   display: block;
-//   font-weight: bold;
-// }
-
-// p {
-//   display: block;
-//   margin-block-start: 1em;
-//   margin-block-end: 1em;
-//   margin-inline-start: 0px;
-//   margin-inline-end: 0px;
-//   font-family: "Source Sans Pro";
-// }
-
-// .sell-upload-box + p {
-//   font-size: 14px;
-//   margin: 8px 0 0;
-//   line-height: 1.5;
-//   text-align: left;
-//   height:21px;
-//   width:540px;
-
-// }
-
-// .sell-upload-head{
-//   height: 16px;
-//   width:540px;
-//   font-size: 16px;
-//   line-height: 1.5;
-//   display: block;
-//   font-weight: bold;
-// }
-
-// .form-require {
-//   background-color: $red;
-//   margin:8px 0 0 8px;
-//   padding:2px 4px;
-//   border-radius: 2px;
-//   color: $white;
-//   font-size: 12px;
-//   vartical-align: top;
-// }
-
-// /*.sell-dropbox-container clearfix state-image-number-10 {
-//   height: 162px;
-//   width:620px;
-//   margin:16px auto 0;
-//   display: block;
-// }
-
-// .sell-upload-items-container {
-//   height: auto;
-//   width: auto;
-//   display: inline;
-// }
-
-// .sell-upload-items have-item-0 {
-//   height: 172px;
-//   width: 116px;
-//   background-color: #f5f5f5;
-// }
-
-// .sell-upload-drop-box have-item-0 {
-// /*  position: relative;
-//   overflow: hidden;*/
-// /*  height: 80px;
-//   width: 538px;
-//   padding: 40px;
-//   border: solid 1px #f5f5f5;
-// }*/
-
-// /*.sell-upload-drop-file {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-// }*/
-// /*.image1 {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   height: 18px;
-//   filter: alpha(opacity = 0); /* for IE6, IE7
-//   opacity: 0;
-//   z-index: 1;
-//   cursor: pointer;
-// }
-// */
-// /*.ul {
-//   width:100%;
-
-// }*/
-
-// .visible-pc {
-//   text-align: center;
-// }
-
-// .sell-upload-items {
-//   height:160px;
-//   width:114px;
-//   border:1px;
-//   margin-bottom: 10px;
-//   float: left;
-// }
-
-// .sell-upload-figure portrait {
-//   height: 116px;
-//   width:114px;
-// }
-
-// .sell-upload-button {
-//   height: 44px;
-//   width:114px;
-// }
-
-// .sell-upload-edit {
-//   height: 44px;
-//   width:57px;
-// }
-
-// .form-group:first-child {
-//   width: 620px;
-//   height: 70px;
-//   margin: 0;
-// }
-
-// label {
-//   font-weight: bold;
-//   display: inline-block;
-//   cursor: default;
-// }
-
-// .form-group label {
-//   font-weight: 600;
-// }
-
-// .input-default {
-//   width: 586px;
-//   height:28px;
-//   padding:10px 16px 8px;
-//   border:solid 1px #ccc;
-//   line-height: 1.5;
-//   font-size: 16px;
-//   border-radius: 4px;
-//   margin-top:8px;
-// }
-
-// .form-group {
-//   width: 620px;
-//   height: 164px;
-//   margin-top: 40px;
-// }
-
-// .form-group label + .textarea-default {
-//   margin: 8px 0 0;
-// }
-
-// .textarea-default {
-//   display: block;
-//   width: 100%;
-//   max-width:100%;
-//   min-height: 104px;
-//   background-color: $white;
-//   line-height: 1.5;
-//   padding: 10px;
-//   border:solid 1px $deep-gray;
-//   font-size: 16px;
-//   border-radius: 4px;
-// }
-
-// textarea {
-//   overflow: auto;
-// }
-
-// .sell-sub-head {
-//   height: 14px;
-//   width:70px;
-//   float: left;
-//   color: #888;
-//   font-size: 14px;
-// }
-
-// h3 {
-//   display: block;
-//   font-weight: bold;
-// }
-
-// .sell-form-box {
-//   height: 180px;
-//   width: 400px;
-//   float: right;
-// }
-
-// .sell-form-box .form-group {
-//   width: 400px;
-//   height: 70px;
-// }
-
-// .form-group .select-wrap {
-//   height: 48px;
-//   width: 400px;
-//   margin-top: 8px;
-// }
-
-// .select-wrap {
-//   position: relative;
-//   background-color: $white;
-// }
-
-// .select-default {
-//   position: relative;
-//   z-index: 2;
-//   height: 46px;
-//   width: 366px;
-//   padding:0 16px;
-//   border-radius: 4px;
-//   border: 1px solid $deep-gray;
-//   background: 0;
-//   font-size: 16px;
-//   line-height: 1.5;
-//   cursor: pointer;
-// }
-
-// /*.clearfix:after {
-//   clear: both;
-//   content: '';
-//   display: block;
-// }*/
-
-// /*.select-wrap .icon-arrow-bottom {
-//   height: 10px;
-//   width: 16.281px;
-//   position: absolute;
-//   right: 16px;
-//   top: 50%;
-//   z-index: 2;
-//   color: #888;
-//   font-size: 8px;
-//   transform: translate(0, -50%);
-// }
-
-// .icon-arrow-bottom {
-//   display: inline-block;
-//   font-family: 'icon-font';
-//   speak: none;
-//   font-style: normal;
-//   font-weight: 400;
-//   font-variant: normal;
-//   text-transform: none;
-//   line-height: 1;
-//   -webkit-font-smoothing: antialiased;
-// }*/
-
-// .sell-content {
-//   width: 620px;
-//   height: 274px;
-//   padding: 40px;
-//   border-top: solid 1px $gray;
-// }
-
-// .clearfix:after {
-//   content: '';
-//   display: block;
-//   clear: both;
-//   border-style: solid;
-//   border-width: 0;
-// }
-
-// .sell-content+.clearfix {
-//   height: 180px;
-// }
-// /*商品の詳細*/
-
-// .sell-sub-head {
-//   height: 14px;
-//   width: 84px;
-//   float: left;
-//   color: #888;
-//   font-size:14px;
-// }
-
-// .form-question {
-//   height: 14px;
-//   width: 14px;
-//   border-radius: 50%;
-//   display: inline-block;
-//   background-color: $blue;
-//   color: $white;
-//   text-align: center;
-//   font-size: 12px;
-//   cursor :pointer;
-//   line-height: 14px;
-//   margin-bottom: 6px;
-//   transition: .4s;
-// }
-
-// a.form-question {
-//   text-decoration: none;
-// }
-
-// .sell-sub-head .sell-form-box {
-//   height: 290px;
-//   width: 400px;
-//   padding: 40px;
-//   float: right;
-//   border: solid 1px $gray;
-// }
-
-// .sell-content+.clearfix:nth-of-type(2) {
-//   height: 290px;
-// }
-
-
-
-// h3.sell-sub-head {
-//   height: 14px;
-//   width: 158.594px;
-//   float: left;
-//   color: #888;
-//   font-size:14px;
-//   display: block;
-//   font-weight: bold;
-// }
-
-// h3.sell-sub-head p {
-//   font-size: 10px;
-//   display: inline-block;
-//   margin:0;
-// }
-
-// .sell-form-box {
-//   height: 218px;
-//   width: 400px;
-//   float: right;
-// }
-
-//  .sell-price {
-//   border: 0;
-//   height: 218px;
-//   width: 400px;
-// }
-
-// .sell-price .form-group .l-right {
-//   width: 50%;
-// }
-
-// .sell-price>li:first-child {
-//   padding-bottom: 24px;
-//   border: 0;
-// }
-
-// ul {
-//   list-style-type: none;
-// }
-
-// li {
-//   display: list-item;
-//   border-top: solid 1px #ccc;
-// }
-
-// li .form-group {
-//   height: 48px;
-// }
-
-// .form-group:first-child {
-//   margin: 0;
-// }
-
-// .form-group label {
-//   font-weight: 600;
-// }
-
-// .l-left {
-//   float: left;
-// }
-
-// li.clearfix {
-//   height: 14px;
-//   padding: 24px 0;
-//   }
-
-// li.clearfix:after {
-//   content: '';
-//   display: block;
-//   clear: both;
-//   border-style: solid;
-//   border-width: 0;
-// }
-
-// li.sell-price-input {
-//   height: 48px;
-//   width: 200px;
-//   text-align:right;
-//   float: right;
-// }
-
-// li .input-default {
-//   text-align: right;
-//   width:126px;
-//   height: 28px;
-//   padding:10px 16px 8px;
-//   border: solid 1px #f5f5f5;
-//   float: right;
-//   margin: 0;
-// }
-
-// .bold {
-//   font-weight: 600;
-//   height: 34px;
-//   width: 400px;
-//   padding: 24px 0;
-//   border-top: solid 1px #ccc;
-//   font-size: 16px;
-// }
-
-// .bold .l-right {
-//   font-size: 34px;
-// }
-
-// .l-right {
-//   float: right;
-// }
-
-// .sell-content.sell-btn-box {
-//   height: 248px;
-//   width: 620px;
-//   padding: 40px;
-//   border-top: solid 1px #eee;
-// }
-
-// a {
-//   color: #0099e8;
-//   text-decoration: none;
-//   font-size: 14px;
-// }
-
-// .sell-btn-box .btn-red {
-//   margin: 40px 0 0;
-// }
-
-// .btn-default {
-//   width: 100%;
-//   display: block;
-//   line-height: 48px;
-//   text-align: center;
-//   cursor: pointer;
-//   font-size: 14px;
-// }
-
-// .btn-red {
-//   border: solid 1px #ea352d;
-//   background-color: #ea352d;
-//   color: white;
-// }
-
-// .sell-btn-box .btn-gray {
-//   width: 45%;
-//   margin:24px auto 0;
-// }
-
-// .btn-gray {
-//   background-color: #aaa;
-//   border: solid 1px #aaa;
-//   color: #fff;
-//    }
+.sell-content2 {
+  height: 180px;
+}
+.sell-content3 {
+  height: 290px;
+}
+.sell-content4 {
+  height: 218px;
+}
+
+// 販売価格
+.sell-price>li:first-child {
+  padding: 0 0 24px;
+  border: 0;
+  height: 72px;
+}
+.sell-price>li {
+  border-top: 1px solid #ccc;
+}
+.sell-price .form-group .l-left {
+  width: 50%;
+  line-height: 1.5;
+}
+.sell-price .form-group .l-right {
+  width: 50%;
+}
+.sell-price .clearfix {
+  padding: 24px 0 24px;
+}
+.sell-price .bold .l-left {
+  font-size: 16px;
+}
+.sell-price .bold .l-right {
+  font-size: 34px;
+}
+.sell-price-input {
+  text-align: right;
+  margin: 0;
+}
+.sell-price-input>div {
+  display: inline-block;
+  width: 80%;
+  margin: 0 0 0 5%;
+}
+.sell-price-input .input-default {
+  margin: 0;
+  text-align: right;
+  width: 126px;
+}
+.l-right {
+  float: right;
+  padding: 0;
+}
+.l-left {
+  float: left;
+  padding: 0;
+}
+.bold {
+  font-weight: 600;
+}
+.sell-btn-box p {
+  line-height: 1.5;
+}
+.sell-btn-box {
+  .btn-red {
+    width: 100%;
+  }
+}
+p {
+  margin: 8px 0 0;
+  line-height:1.5;
+  display:block;
+  font-family:"Source Sans Pro";
+  color:$black;
+  font-size:14px;
+}
+a {
+  color:$blue;
+  text-decoration:none;
+}
+// ボタン
+.sell-btn-box .btn-red {
+  margin: 40px 0 0;
+}
+.btn-default {
+  width: 100%;
+  display: block;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn-red {
+  border: solid 1px $red;
+  background-color: $red;
+  color: $white;
+}
+.sell-btn-box .btn-gray {
+  width: 45%;
+  margin:24px auto 0;
+}
+.btn-gray {
+  background-color: #aaa;
+  border: solid 1px #aaa;
+  color: $white;
+}
+}
