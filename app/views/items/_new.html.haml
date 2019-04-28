@@ -1,6 +1,6 @@
 .single-container
   %main.single-main
-    %section.l-single-container.buy-item-container
+    %section.l-single-container--buy-item-container
       #sell-container
         %div{"data-reactroot" => ""}
           .sell-container-inner
@@ -91,6 +91,7 @@
                       発送元の地域
                       %span.form-require 必須
                     .select-wrap
+                      / = f.collection_select :prefecture_id, Prefecture.all, :id, :name
                       %select.select-default
                         %option{:value => ""} ---
                         %option{:value => "1"} 北海道

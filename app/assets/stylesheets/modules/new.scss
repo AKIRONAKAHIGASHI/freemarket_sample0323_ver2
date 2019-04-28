@@ -8,29 +8,26 @@
   width: 1440px;
   background-color: $gray;
   display: block;
-}
-.single-main {
-  width:1440px;
-  height:2016px;
-  background-color: $gray;
-  display: block;
-  .l-single-container.buy-item-container{
-    width: 700px;
+  &--single-main {
     height:2016px;
-    margin: 0px 370px;
-    display: block;
-    background-color: $white;
-    margin: 0 auto;
-    div {
-    display: block;
-    background-color: $white;
-    color: $black;
-      .data-reactroot {
-      height: 2016px;
-      color: $black;
-      }
-    }
   }
+}
+.l-single-container--buy-item-container{
+  width: 700px;
+  height:2016px;
+  margin: 0px 370px;
+  display: block;
+  background-color: $white;
+  margin: 0 auto;
+}
+div {
+display: block;
+background-color: $white;
+color: $black;
+}
+.data-reactroot {
+height: 2016px;
+color: $black;
 }
 // 商品の情報を入力
 .sell-container-inner h2 {
